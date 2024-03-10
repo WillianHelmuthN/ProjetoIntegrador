@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Despedida</title>
+</head>
+<body>
+    <h1>Até logo!</h1>
+    <p>Obrigado por visitar, <span id="username"></span>!</p>
+
+    <script>
+        const username = getCookie('username');
+        document.getElementById('username').textContent = username;
+
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+    </script>
+</body>
+</html>

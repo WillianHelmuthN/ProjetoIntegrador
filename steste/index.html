@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página Inicial</title>
+</head>
+<body>
+    <h1>Bem-vindo(a) à Minha Página Inicial!</h1>
+    <p>Por favor, digite seu nome:</p>
+    <input type="text" id="nameInput">
+    <button onclick="saveName()">Enviar</button>
+
+    <a href="/goodbye">Ir para a página de despedida</a>
+
+    <script>
+        function saveName() {
+            const name = document.getElementById('nameInput').value;
+            document.cookie = `username=${name}`;
+        }
+    </script>
+</body>
+</html>
