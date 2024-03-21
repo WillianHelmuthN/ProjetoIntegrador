@@ -1,0 +1,5 @@
+nodemon
+mysql2
+knex
+cors
+express
